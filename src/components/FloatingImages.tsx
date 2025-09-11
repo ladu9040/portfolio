@@ -358,7 +358,7 @@ useEffect(() => {
       repeat: -1,
       transformOrigin: "center center",
     });
-  }, null, 3);
+  }, [], 3);
 
   function startTextAnimation() {
     let currentTextIndex = 0;
