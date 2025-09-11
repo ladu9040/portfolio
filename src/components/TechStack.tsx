@@ -151,8 +151,9 @@ import React, { useEffect, useRef } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function TechStack() {
-  const panoramaRef = useRef(null);
-  const panoramaRef2 = useRef(null);
+ const panoramaRef = useRef<HTMLDivElement>(null);
+const panoramaRef2 = useRef<HTMLDivElement>(null);
+
   const textRef = useRef<HTMLHeadingElement>(null);
 
   // Top row scroll left
