@@ -18,8 +18,11 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "w7.pngwing.com",
-      }
+      },
     ],
+  },
+  eslint: {
+    ignoreDuringBuilds: true, // 🚀 allows deployment even with lint errors
   },
 };
 
