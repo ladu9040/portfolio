@@ -50,13 +50,13 @@ export default function Footer() {
             <div className="flex flex-col gap-2">
               <p className="font-medium">Pages</p>
               <a href="#">Home</a>
-              <a href="#">About</a>
-              <a href="#">Works</a>
+              <a href="#techstack">About</a>
+              <a href="#works">Works</a>
             </div>
             <div className="flex flex-col gap-2">
               <p className="opacity-0">_</p>
               <a href="#">Work page</a>
-              <a href="#">Contact</a>
+              <a href="/contact">Contact</a>
             </div>
           </div>
 
