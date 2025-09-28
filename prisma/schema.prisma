@@ -5,7 +5,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = env("postgresql://postgres:Ladu8260@localhost:5432/my_portfolio_db")
 }
 
 model Contact {

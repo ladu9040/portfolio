@@ -39,8 +39,8 @@ export default function DownloadResumeButton() {
   // Handle download
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/resume-ladu.pdf"; // ✅ place your resume file inside /public folder
-    link.download = "My_Resume.pdf"; // name for the downloaded file
+    link.href = "/resume-ladu.pdf"; 
+    link.download = "My_Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

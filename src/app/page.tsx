@@ -10,7 +10,7 @@ import TechStack from "@/components/TechStack";
 import Whatido from "@/components/Whatido";
 import Works from "@/components/Works";
 import Loader from "@/components/Loader";
-import DownloadResumeButton from "@/components/DownloadButton"; // ✅ import button
+import DownloadResumeButton from "@/components/DownloadButton"; 
 
 export default function Home() {
   return (
@@ -22,7 +22,7 @@ export default function Home() {
         </div>
 
         {/* Header */}
-        <div className="fixed h-full w-full z-50">
+        <div className="fixed h-full w-full z-[999999]">
           <Header />
         </div>
 
@@ -44,7 +44,7 @@ export default function Home() {
         <Footer />
 
         {/* ✅ Download Resume Button fixed at bottom-right */}
-        <div className="fixed bottom-6 right-6 z-[9999]">
+        <div className="fixed bottom-6 right-6 z-[99999999]">
           <DownloadResumeButton />
         </div>
       </div>

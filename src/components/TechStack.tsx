@@ -105,9 +105,9 @@
 //         <div className="slider h-[12rem] w-full overflow-hidden flex flex-col justify-between opacity-35 relative">
 //   {/* Left Gradient Overlay */}
 //   <div className="absolute left-0 top-0 h-full w-36 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-  
+
 //   {/* Right Gradient Overlay */}
-//   <div className="absolute right-0 top-0 h-full w-36 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />      
+//   <div className="absolute right-0 top-0 h-full w-36 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 //           <div ref={panoramaRef} className=" flex gap-6 whitespace-nowrap ">
 //             {[...images, ...images].map((src, idx) => (
 //               <Image
@@ -140,7 +140,6 @@
 //   );
 // }
 
-
 "use client";
 
 import gsap from "gsap";
@@ -151,8 +150,8 @@ import React, { useEffect, useRef } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function TechStack() {
- const panoramaRef = useRef<HTMLDivElement>(null);
-const panoramaRef2 = useRef<HTMLDivElement>(null);
+  const panoramaRef = useRef<HTMLDivElement>(null);
+  const panoramaRef2 = useRef<HTMLDivElement>(null);
 
   const textRef = useRef<HTMLHeadingElement>(null);
 
@@ -246,18 +245,19 @@ const panoramaRef2 = useRef<HTMLDivElement>(null);
 
   return (
     <>
-      <div className="h-[100vh] py-[8rem] w-full flex flex-col gap-64">
-        <div className="content h-[14rem] w-full px-16 py-8 flex justify-between">
+      <div className="h-fit py-[8rem] w-full flex flex-col gap-64">
+        <div className="content h-auto w-full px-6 md:px-16 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+          {/* Left side (TECHSTACK) */}
           <div className="h-fit flex w-fit items-center">
             <div className="rainbow-line h-[2px] w-[3.5rem] bg-[linear-gradient(90deg,#ff4d00,#e7eb4c_31%,#0b90cb_68%,#0c59c1)]"></div>
             <span className="font-semibold">TECHSTACK</span>
           </div>
 
           {/* Animated Heading */}
-          <div className="text w-5xl">
+          <div className="text w-full md:w-5xl">
             <h1
               ref={textRef}
-              className="text-6xl font-semibold leading-snug flex flex-wrap gap-2"
+              className="text-3xl sm:text-4xl md:text-6xl font-semibold leading-snug flex flex-wrap gap-2"
             >
               {headingText.split(" ").map((word, i) => (
                 <span
@@ -272,7 +272,7 @@ const panoramaRef2 = useRef<HTMLDivElement>(null);
         </div>
 
         {/* Scrolling Slider */}
-        <div className="slider h-[12rem] w-full overflow-hidden flex flex-col justify-between opacity-35 relative">
+        <div className="slider h-[8rem] md:h-[12rem] md:relative md:top-[-50px] w-full overflow-hidden flex flex-col justify-between opacity-35 relative">
           {/* Left Gradient Overlay */}
           <div className="absolute left-0 top-0 h-full w-36 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
 
@@ -282,28 +282,30 @@ const panoramaRef2 = useRef<HTMLDivElement>(null);
           {/* Top row */}
           <div ref={panoramaRef} className="flex gap-6 whitespace-nowrap">
             {[...images, ...images].map((src, idx) => (
-              <Image
-                key={`top-${idx}`}
-                src={src}
-                alt={`Panorama ${idx}`}
-                width={80}
-                height={80}
-                className="w-[80px] h-[80px] object-contain opacity-50 hover:opacity-200 transition-opacity duration-300"
-              />
+<Image
+  key={`top-${idx}`}
+  src={src}
+  alt={`Panorama ${idx}`}
+  width={80}
+  height={80}
+  className="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] md:w-[70px] md:h-[70px] lg:w-[80px] lg:h-[80px] xl:w-[90px] xl:h-[90px] object-contain opacity-50 hover:opacity-200 transition-opacity duration-300"
+/>
+ 
             ))}
           </div>
 
           {/* Bottom row */}
           <div ref={panoramaRef2} className="flex gap-6 whitespace-nowrap">
             {[...images2, ...images2].map((src, idx) => (
-              <Image
-                key={`bottom-${idx}`}
-                src={src}
-                alt={`Panorama2 ${idx}`}
-                width={80}
-                height={80}
-                className="w-[80px] h-[80px] object-contain opacity-50 hover:opacity-200 transition-opacity duration-300"
-              />
+<Image
+  key={`bottom-${idx}`}
+  src={src}
+  alt={`Panorama2 ${idx}`}
+  width={80}
+  height={80}
+  className="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] md:w-[70px] md:h-[70px] lg:w-[80px] lg:h-[80px] xl:w-[90px] xl:h-[90px] object-contain opacity-50 hover:opacity-200 transition-opacity duration-300"
+/>
+
             ))}
           </div>
         </div>

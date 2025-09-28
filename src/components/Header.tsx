@@ -20,11 +20,11 @@ export default function Header() {
 
   return (
     <header
-      className={` top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#f8f7f3]${
+      className={` top-0 left-0 right-0 z-[9999] transition-all duration-300 bg-[#f8f7f3]${
         isScrolled ? "bg-white/90 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="header-content max-w-full mx-auto px-14 py-4 bg-transparent">
+      <div className="header-content max-w-full mx-auto px-2 lg:px-14 sm:px-3 py-4 bg-transparent">
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">

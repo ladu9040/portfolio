@@ -110,23 +110,43 @@ export default function Works() {
           >
          
            {/* Big image container */}
-<a href={project.url} target="_blank" rel="noopener noreferrer" className="relative w-[85%] max-w-5xl main-image top-28 cursor-pointer">
+<a
+  href={project.url}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="relative top-20 main-image cursor-pointer group 
+             w-[90vw] sm:w-[85vw] md:w-[75vw] lg:w-[70vw] xl:w-[65vw] 
+             max-w-[900px] 
+             aspect-[16/9]"  
+>
   <img
     src={project.bigImage}
     alt={project.title}
-    className="w-full rounded-[30px] shadow-lg cursor-pointer"
+    className="w-full h-full object-cover rounded-2xl shadow-lg 
+               transition-transform duration-300 group-hover:scale-[1.02]"
   />
 
-  {/* Small image overlay */}
-  <div className="absolute -right-24 top-24 w-[18rem] rounded-[30px] overflow-hidden shadow-lg small-image">
+  {/* Small video overlay */}
+  <div
+    className="absolute 
+      -right-14 top-14 
+      w-[25vw] sm:w-[22vw] md:w-[20vw] lg:w-[18vw] xl:w-[15vw] 
+      aspect-[16/9]   // also rectangular
+      rounded-xl overflow-hidden shadow-lg small-image
+      transform transition-all duration-300 group-hover:scale-110"
+  >
     <video
       src={project.video}
       autoPlay
       muted
+      loop
+      playsInline
       className="w-full h-full object-cover"
     />
   </div>
 </a>
+
+
 
 
             {/* Text */}

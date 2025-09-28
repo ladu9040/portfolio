@@ -123,22 +123,21 @@ export default function Scrolling() {
           </div>
 
           {/* Foreground Texts */}
-          <div className="relative flex items-center justify-center w-full left-10 z-10">
+          <div className="relative flex items-center justify-center w-full -left-2 lg:left-7  z-10">
             {/* Left Text */}
             <span
               ref={leftTextRef}
-              className="text-6xl md:text-8xl font-bold z-10 relative left-16"
+              className="text-4xl md:text-8xl  font-bold z-10 relative left-16"
             >
               I'm
             </span>
 
             {/* Spacer div to match original layout */}
-            <div className="w-72 h-32"></div>
-
+<div className="w-24 sm:w-24 md:w-32 lg:w-48 xl:w-64 h-16 sm:h-20 md:h-24 lg:h-28 xl:h-32"></div>
             {/* Right Text */}
             <span
               ref={rightTextRef}
-              className="text-6xl md:text-8xl font-bold z-10 relative"
+              className="text-4xl md:text-8xl  font-bold z-10 relative"
             >
               Coder
             </span>
