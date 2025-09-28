@@ -56,7 +56,6 @@ export default function Footer() {
             <div className="flex flex-col gap-2">
               <p className="opacity-0">_</p>
               <a href="#">Work page</a>
-              <a href="#">Blog</a>
               <a href="#">Contact</a>
             </div>
           </div>
@@ -74,7 +73,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Row */}
-        <div className="flex justify-between items-center text-sm text-gray-600 absolute top-[30%] gap-4">
+        <div className="flex justify-between items-center text-sm text-gray-600 left-0 absolute top-[30%] gap-4 flex-wrap px-2">
           {/* Left Bottom */}
           <div className="flex items-center gap-4">
             <span>© 2025 Ladu</span>
@@ -95,7 +94,7 @@ export default function Footer() {
 
         {/* Big Animated Text */}
         <div className="flex  items-center flex-grow absolute bottom-0">
-          <div className="flex gap-4 text-[20vw] font-thin leading-none">
+          <div className="flex gap-4 text-[30vw] lg:text-[20vw] font-thin leading-none">
             {text.split("").map((char, index) => (
               <span
                 key={index}
