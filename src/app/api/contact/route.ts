@@ -8,12 +8,10 @@ export async function POST(req: Request) {
   try {
     const { name, email, message } = await req.json();
 
-    // Save to DB
     const contact = await prisma.contact.create({
       data: { name, email, message },
     });
 
-    // Nodemailer transporter
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -22,7 +20,6 @@ export async function POST(req: Request) {
       },
     });
 
-    // Send email
     await transporter.sendMail({
       from: `"Portfolio Contact" <${process.env.MY_EMAIL}>`,
       to: process.env.MY_EMAIL,
