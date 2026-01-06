@@ -21,9 +21,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  eslint: {
-    ignoreDuringBuilds: true, // 🚀 allows deployment even with lint errors
-  },
+ 
 };
 
 export default nextConfig;
